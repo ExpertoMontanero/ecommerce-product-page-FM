@@ -14,16 +14,22 @@
     --grayish-blue: hsl(220, 14%, 75%);
     --light-grayish-blue: hsl(223, 64%, 98%);
     --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
+    --black: rgba(0, 0, 0, 0.750);
     /* (with 75% opacity for lightbox background) */
 }
 
 body {
     position: relative;
-    margin: 2em 7%;
+    min-height: 90vh;
+    margin: 2em 22em;
     padding: 0;
-    position: relative;
     font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* horizontal line */
+hr {
+    margin-top: 2.1em;
+    border: 1px solid var(--grayish-blue);
 }
 
 /* NAVBAR CUSTOMIZATION */
@@ -35,6 +41,7 @@ body {
     width: 300px;
     height: 20px;
 }
+
 /* margin from brand logo */
 .navbar-nav {
     margin-left: 3em;
@@ -44,6 +51,44 @@ body {
 .nav-item {
     margin-left: 1.2em;
 }
+
+.nav-link {
+    color: var(--dark-grayish-blue);
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+    color: var(--very-dark-blue);
+}
+
+/* navbar togler icon */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+
+}
+
+.navbar-toggler span {
+    margin: none;
+    padding: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('../images/icon-menu.svg');
+    background-size: 80%;
+    border: none;
+}
+
+/* navbar brand */
+.navbar-brand {
+    margin-left: 0.5em;
+}
+
+/* no collapse items positioning */
 
 /* user and cart buttons */
 .btn {
@@ -61,6 +106,10 @@ body {
     background-image: url('../images/image-avatar.png');
     background-size: cover;
     background-repeat: no-repeat;
+
+}
+
+#user-btn:hover {
     border: solid;
     border-width: 3px;
     border-radius: 50%;
@@ -78,4 +127,163 @@ body {
 
 #cart-btn:hover {
     filter: brightness(0%);
+}
+
+/* SIDEBAR  */
+
+
+
+
+/* LINKS ANIMATION */
+@media(min-width:767px) {
+
+    /* Links animation */
+    .nav-link {
+        transition: all 0.2s;
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+        text-decoration-color: #fff;
+        text-decoration-thickness: 8px;
+    }
+
+    .nav-link:hover {
+        top: 2em;
+        text-decoration: underline;
+        text-underline-offset: 3em;
+        text-decoration-color: var(--orange);
+        text-decoration-thickness: 4px;
+    }
+
+}
+
+@media(max-width:1600px) {
+    body {
+        margin: 2em 16em;
+    }
+}
+
+@media(max-width:1500px) {
+    body {
+        margin: 2em 9em;
+    }
+
+    .navbar,
+    hr {
+        scale: 0.95;
+        margin-top: 2em;
+    }
+
+    hr {
+        margin-top: 2em;
+    }
+
+}
+
+
+@media(max-width:1400px) {
+    body {
+        margin: 2em 7em;
+    }
+
+    .navbar,
+    hr {
+        scale: 0.9;
+
+    }
+
+    hr {
+        margin-top: 1.75em;
+    }
+}
+
+@media(max-width:1200px) {
+    body {
+        margin: 2em 0em;
+    }
+
+    .navbar,
+    hr {
+        scale: 0.8;
+        width: 104%
+    }
+
+    hr {
+        margin-top: 1.45em;
+    }
+
+    #cart-btn {
+        margin-right: 4.5em;
+    }
+
+}
+
+@media(max-width:767px) {
+    hr {
+        display: none;
+    }
+
+    body {
+        margin: 2em 0em 2em -2em;
+    }
+
+    .navbar-brand {
+        scale: 1.3;
+        margin-left: 1.5em;
+    }
+
+    #cart-btn {
+        scale: 1.3;
+    }
+
+    /* overlay effect customization  */
+    .navbar-nav {
+        position: absolute;
+        top: 0em;
+        left: -300px;
+        /* Start with the sidebar hidden */
+        margin: -3.5em -3em;
+        width: 90vw;
+        height: 125.7vh;
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    .navbar-nav-slide {
+        left: -15px;
+        transition: left 0.2s ease-in-out;
+    }
+
+    .overlay {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--black);
+    }
+
+    .navbar {
+        z-index: 3;
+    }
+
+    .no-collapse-item {
+        position: relative;
+        margin-top: -3em;
+    }
+
+    .top-item {
+        margin-top: 7em;
+    }
+
+    .nav-item {
+        margin-left: 5em;
+    }
+
+    .nav-link {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.900);
+    }
+
 }
