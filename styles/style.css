@@ -131,6 +131,18 @@ hr {
 
 /* SIDEBAR  */
 
+#close-btn{
+    width: 28px;
+    height: 30px;
+    position: relative;
+    top:4em;
+    left:4em;
+    background-image: url('../images/icon-close.svg');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    z-index: 10000;
+}
 
 
 
@@ -252,7 +264,7 @@ hr {
         left: -15px;
         transition: left 0.2s ease-in-out;
     }
-
+    
     .overlay {
         position: fixed;
         z-index: 2;
@@ -268,8 +280,9 @@ hr {
     }
 
     .no-collapse-item {
-        position: relative;
-        margin-top: -3em;
+        position: absolute;
+        right: 0em;
+        top:0em;
     }
 
     .top-item {
