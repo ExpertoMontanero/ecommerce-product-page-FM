@@ -131,12 +131,12 @@ hr {
 
 /* SIDEBAR  */
 
-#close-btn{
+#close-btn {
     width: 28px;
     height: 30px;
     position: relative;
-    top:4em;
-    left:4em;
+    top: 4em;
+    left: 4em;
     background-image: url('../images/icon-close.svg');
     background-size: 75%;
     background-repeat: no-repeat;
@@ -144,7 +144,70 @@ hr {
     z-index: 10000;
 }
 
+/* --------------------------------- */
+/* --------------MAIN--------------- */
+/* --------------------------------- */
+main {
+    margin: 5em 3em;
+    height: 65vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 10em;
+}
 
+/* LEFT SECTION */
+.left-section {
+
+    width: 50%;
+}
+
+/* main img */
+.big-img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* minatures */
+.img-minatures-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+/* parent for creating border */
+.minature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    border-radius: 13px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.orange-border {
+    border: 3px solid rgba(255, 165, 0, 1);
+}
+
+/* size and minature opacity changing */
+.minature-img {
+    width: 100%;
+}
+
+.minature-img:hover {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.transparency{
+    opacity: 0.4;
+}
+
+/* RIGHT SECTION */
+
+.right-section {
+    width: 50%;
+}
 
 /* LINKS ANIMATION */
 @media(min-width:767px) {
@@ -172,6 +235,10 @@ hr {
     body {
         margin: 2em 16em;
     }
+
+    main {
+        margin: 5em 7%;
+    }
 }
 
 @media(max-width:1500px) {
@@ -188,7 +255,6 @@ hr {
     hr {
         margin-top: 2em;
     }
-
 }
 
 
@@ -227,6 +293,9 @@ hr {
         margin-right: 4.5em;
     }
 
+    main {
+        margin: 5em 15%;
+    }
 }
 
 @media(max-width:767px) {
@@ -253,7 +322,7 @@ hr {
         top: 0em;
         left: -300px;
         /* Start with the sidebar hidden */
-        margin: -3.5em -3em;
+        margin: -3.5em -5em;
         width: 90vw;
         height: 125.7vh;
         background-color: #fff;
@@ -262,9 +331,9 @@ hr {
 
     .navbar-nav-slide {
         left: -15px;
-        transition: left 0.2s ease-in-out;
+        transition: left 0.2s ease-in;
     }
-    
+
     .overlay {
         position: fixed;
         z-index: 2;
@@ -282,7 +351,7 @@ hr {
     .no-collapse-item {
         position: absolute;
         right: 0em;
-        top:0em;
+        top: 0em;
     }
 
     .top-item {
@@ -297,6 +366,10 @@ hr {
         font-size: 1.5em;
         font-weight: 700;
         color: rgba(0, 0, 0, 0.900);
+    }
+
+    main {
+        margin: 2em 2em;
     }
 
 }
