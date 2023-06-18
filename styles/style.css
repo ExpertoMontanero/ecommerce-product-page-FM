@@ -246,7 +246,7 @@ main {
     display: flex;
     align-items: center;
     margin-top: 2em;
-    width: 170px;
+    width: 200px;
     flex-wrap: wrap;
 }
 
@@ -499,8 +499,12 @@ main {
         scale: 1.3;
     }
 
-    .navbar-toggler-icon {
+    .navbar-toggler {
         margin-left: -2em;
+    }
+
+    .navbar-x {
+        margin-left: 0em;
     }
 
     /* overlay effect customization  */
@@ -585,8 +589,6 @@ main {
     .left-section {
         justify-content: center;
     }
-
-    .right-section {}
 
     .big-img {
         width: 100vw;
