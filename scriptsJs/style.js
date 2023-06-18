@@ -38,22 +38,22 @@ $('.minature').on('click', function () {
     $('.orange-border').css('border', '0px');
     switch (childId) {
         case 'first-minature':
-            $('.big-img').attr('src', '../images/image-product-1.jpg');
+            $('.big-img').attr('src', './images/image-product-1.jpg');
             $(this).css('border', ' 3px solid rgba(255, 165, 0, 1)');
             childElement.addClass('transparency');
             break;
         case 'second-minature':
-            $('.big-img').attr('src', ' ../images/image-product-2.jpg');
+            $('.big-img').attr('src', ' ./images/image-product-2.jpg');
             $(this).css('border', ' 3px solid rgba(255, 165, 0, 1)');
             childElement.addClass('transparency');
             break;
         case 'third-minature':
-            $('.big-img').attr('src', '../images/image-product-3.jpg');
+            $('.big-img').attr('src', './images/image-product-3.jpg');
             $(this).css('border', ' 3px solid rgba(255, 165, 0, 1)');
             childElement.addClass('transparency');
             break;
         case 'fourth-minature':
-            $('.big-img').attr('src', '../images/image-product-4.jpg');
+            $('.big-img').attr('src', './images/image-product-4.jpg');
             $(this).css('border', ' 3px solid rgba(255, 165, 0, 1)');
             childElement.addClass('transparency');
             break;
