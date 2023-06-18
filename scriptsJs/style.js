@@ -1,5 +1,7 @@
+if ($(window).width() < 767) {
+    $('.img-minatures-container').css('display', 'none');
+}
 // OVERLAY EFFECT MOBILE
-
 $('.navbar-toggler').on('click', function () {
     // anmiation of slidebar menu and overlay applying
     $('.navbar-nav').addClass('navbar-nav-slide');
@@ -13,6 +15,7 @@ $(window).on('resize', function () {
     if ($(window).width() > 767) {
         $('.no-collapse-item').css('filter', 'brightness(1)');
         $('.no-collapse-item').css('margin-top', '-3em');
+        $('.img-minatures-container').css('display', 'flex');
     }
     else {
         $('.no-collapse-item').css('margin-top', '0em');
@@ -61,4 +64,8 @@ $('.minature').on('click', function () {
     }
 });
 
-
+$(window).on('resize', function () {
+    if ($(window).width() < 767) {
+        $('.img-minatures-container').css('display', 'none');
+    }
+});
