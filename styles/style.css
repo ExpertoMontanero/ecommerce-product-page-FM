@@ -537,6 +537,7 @@ main {
 
     .navbar {
         z-index: 3;
+        margin-top: 1.5em;
     }
 
     .no-collapse-item {
@@ -593,8 +594,8 @@ main {
     .big-img {
         width: 100vw;
         border-radius: 0;
-        margin: -3.2em 0em;
-        aspect-ratio: 12/9;
+        margin: -4.2em 0em -3.2em 0;
+        aspect-ratio: 13/9;
         object-fit: cover;
         max-width: 100em;
     }
@@ -625,5 +626,25 @@ main {
     #discount-price {
         margin-left: auto;
         font-size: 1.2em;
+    }
+
+    #btn-section{
+        display: initial;
+    }
+    #to-cart-btn{
+        margin-top: 1.5em;
+        height: 60px;
+    }
+    .counter-btn{
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        font-size: 1.4em;
+        margin-top: 0.5em;
+    }
+
+    .plus-minus{
+        padding: 30px;
+        background-size: 0.8em;
     }
 }
